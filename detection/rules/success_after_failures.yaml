@@ -1,0 +1,14 @@
+rule_id: SL-AUTH-002
+name: Successful authentication after repeated failures
+description: Correlates a successful login with prior failures for the same account and source IP in a configurable window.
+severity: high
+enabled: true
+config:
+  failure_threshold: 5
+  window_seconds: 300
+documentation: >-
+  A success following several failures can indicate guessed credentials, but can also follow ordinary user error. This rule labels suspicious activity for investigation and never concludes compromise automatically.
+recommended_actions:
+  - Confirm the successful authentication with the account owner and review its origin.
+  - Review subsequent account and host activity for other signs of misuse.
+  - Reset credentials only when the investigation and organisational procedure justify it.

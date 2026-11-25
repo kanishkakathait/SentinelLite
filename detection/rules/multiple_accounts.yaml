@@ -1,0 +1,14 @@
+rule_id: SL-AUTH-005
+name: Multiple distinct accounts from one source
+description: Detects one source IP failing authentication against multiple distinct accounts within a configurable window, a password-spraying-like pattern.
+severity: high
+enabled: true
+config:
+  distinct_account_threshold: 5
+  window_seconds: 300
+documentation: >-
+  Counts distinct usernames with failed authentication, separately from repeated attempts against one account. Shared gateways, service accounts, and enumeration during authorised testing can also explain the pattern.
+recommended_actions:
+  - Review the list of targeted accounts and whether they share a normal access pathway.
+  - Check for authorised vulnerability or security testing and shared infrastructure.
+  - Review source reputation using approved local records, without assumptions based solely on this alert.

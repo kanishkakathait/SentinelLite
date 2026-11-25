@@ -1,0 +1,15 @@
+{
+  "simulated": true,
+  "seed": 42,
+  "normal_events": 1000,
+  "suspicious_events": 100,
+  "total_events": 1100,
+  "scenario_count": 13,
+  "generated_through": "2026-11-25T03:00:00.000000Z",
+  "evaluation_unit": "scenario_id and rule_id pairs",
+  "reserved_ip_ranges": [
+    "192.0.2.0/24",
+    "198.51.100.0/24",
+    "203.0.113.0/24"
+  ]
+}

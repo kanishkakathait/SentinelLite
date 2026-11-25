@@ -1,0 +1,15 @@
+.venv/
+.playwright-browsers/
+SentinelLite-Private/
+backups/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.streamlit/secrets.toml
+.env
+.DS_Store
+data/*.db
+data/*.db-*
+data/generated/
+reports/exports/

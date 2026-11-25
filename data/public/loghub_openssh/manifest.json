@@ -1,0 +1,33 @@
+{
+  "citation": "Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. Loghub: A Large Collection of System Log Datasets for AI-driven Log Analytics. IEEE International Symposium on Software Reliability Engineering (ISSRE), 2023.",
+  "dataset": "loghub_open_ssh_2k",
+  "downloaded_sha256": "1e4912727fa88245113d41b16a0cd25ceadba7f931e1c406542885b91254264f",
+  "files": {
+    "LICENSE_LOGHUB.txt": "9ffa6ae259833cdc6e7ed8a0219fec72ef6455fb457b3c44096cb1ac1f0696d4",
+    "OpenSSH_2k.log": "1e4912727fa88245113d41b16a0cd25ceadba7f931e1c406542885b91254264f",
+    "README.md": "49ba1285a035cbc6928bb4446a925687f1835739f5cf76da55b1a65d765770fc"
+  },
+  "ground_truth": "No trusted incident/scenario labels supplied. Do not report precision, recall, or false-positive rate for this import.",
+  "label": "LogHub OpenSSH 2k \u2014 public lab authentication log",
+  "license": "LogHub: datasets freely available for research or academic work, subject to attribution. Refer to the included LICENSE_LOGHUB.txt.",
+  "provenance": "LogPAI/LogHub OpenSSH laboratory logs collected for more than 28 days. Full upstream 2,000-line sample, not a subset or fabricated relabelling.",
+  "raw_record_lines": 2000,
+  "raw_records_modified": false,
+  "reference_timezone": "UTC",
+  "retrieved_at_utc": "2026-11-25T06:17:13.000000Z",
+  "selection": "Complete OpenSSH_2k.log, including exact original line order and contents; legacy syslog records contain no year or timezone offset.",
+  "source_urls": {
+    "LICENSE_LOGHUB.txt": "https://raw.githubusercontent.com/logpai/loghub/master/LICENSE",
+    "OpenSSH_2k.log": "https://raw.githubusercontent.com/logpai/loghub/master/OpenSSH/OpenSSH_2k.log",
+    "README.md": "https://raw.githubusercontent.com/logpai/loghub/master/OpenSSH/README.md"
+  },
+  "timestamp_note": "Year 2015 and UTC are explicit normalisation conventions for reproducible ordering, not verified collection-year or server-offset facts. Raw timestamps remain available for provenance.",
+  "timestamp_year_is_source_fact": false,
+  "timestamp_year_reference": 2015,
+  "timezone_is_source_fact": false,
+  "upstream_git_blob_shas": {
+    "LICENSE_LOGHUB.txt": "f46d7c88d37a5a0d3877ab12147dae1d6ba0bbac",
+    "OpenSSH_2k.log": "587f66b1ebf40fd59f385addc69a8b0671f34b9c",
+    "README.md": "8392c409e528c55f1e0051d2e1d5f5118036333e"
+  }
+}

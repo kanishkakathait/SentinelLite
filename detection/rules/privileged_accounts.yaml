@@ -1,0 +1,17 @@
+rule_id: SL-AUTH-004
+name: Privileged account authentication review
+description: Records configured privileged-account authentication as an informational review point, not as proof of malicious activity.
+severity: informational
+enabled: true
+config:
+  privileged_accounts:
+    - root
+    - administrator
+    - admin
+  session_window_seconds: 3600
+documentation: >-
+  Groups activity for configured account names into source and host sessions. Many matches are expected administration. Analysts should verify whether the maintenance or operational context explains the activity.
+recommended_actions:
+  - Verify an approved administrative session, change, or maintenance record.
+  - Review source, host, session timing, and subsequent privileged actions.
+  - Escalate only when evidence indicates unauthorised or anomalous activity.

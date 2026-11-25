@@ -1,0 +1,23 @@
+rule_id: SL-AUTH-006
+name: Correlated suspicious authentication indicators
+description: Correlates failure-then-success activity with off-hours timing and privileged-account indicators.
+severity: high
+enabled: true
+config:
+  failure_threshold: 5
+  window_seconds: 300
+  minimum_indicators: 2
+  business_start: "08:00"
+  business_end: "18:00"
+  timezone: Australia/Melbourne
+  weekdays_only: false
+  privileged_accounts:
+    - root
+    - administrator
+    - admin
+documentation: >-
+  Requires the repeated-failure indicator plus at least one additional indicator: unusual timing or a privileged account. The explanation lists each contributing signal. This prioritisation is not a determination of compromise.
+recommended_actions:
+  - Validate every contributing indicator and inspect the complete supporting timeline.
+  - Contact the affected user or system owner through an authorised process.
+  - Assess whether credential reset, access review, or stronger MFA is justified by verified findings.

@@ -1,0 +1,14 @@
+rule_id: SL-AUTH-001
+name: Repeated failed authentication from one source
+description: Detects a configurable number of failed authentication attempts for one account from one source IP inside a time window.
+severity: medium
+enabled: true
+config:
+  failure_threshold: 5
+  window_seconds: 300
+documentation: >-
+  Groups failures by source IP and account, sorts them in UTC, and emits non-overlapping episodes. It does not prove malicious intent and cannot distinguish every shared-IP environment.
+recommended_actions:
+  - Review the source, account, hostname, and surrounding authentication history.
+  - Check for password-manager errors, stale credentials, and authorised testing.
+  - Verify the activity with the affected user before considering credential reset or access changes.

@@ -1,0 +1,19 @@
+rule_id: SL-AUTH-003
+name: Authentication outside expected hours
+description: Identifies authentication sessions outside configured business hours as contextual indicators requiring review.
+severity: low
+enabled: true
+config:
+  business_start: "08:00"
+  business_end: "18:00"
+  timezone: Australia/Melbourne
+  weekdays_only: false
+  included_accounts: []
+  included_hosts: []
+  session_window_seconds: 3600
+documentation: >-
+  Applies the configured IANA timezone after UTC normalisation. Activity is grouped into sessions by source, account, and host. Shift work, travel, scheduled jobs, and time-zone errors are common legitimate explanations.
+recommended_actions:
+  - Check shift patterns, scheduled jobs, travel, and authorised after-hours work.
+  - Confirm that the source timestamp and configured timezone are correct.
+  - Investigate further only in combination with the event context and other evidence.
