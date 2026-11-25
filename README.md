@@ -1,6 +1,6 @@
 # SentinelLite
 
-**Security monitoring, threat detection & incident investigation — without the fake dashboard.**
+**Security monitoring, threat detection & incident investigation — Security Monitoring, Threat Detection & Incident Investigation — A Lightweight, Local-First SOC Platform.**
 
 SentinelLite is a lightweight, local-first **educational SIEM-style security monitoring and investigation platform** built with Python, Streamlit, Plotly, Pandas, YAML, and SQLite. It ingests local security logs, normalises events, computes detections, persists evidence/alert relationships, and gives analysts a polished investigation workspace.
 
